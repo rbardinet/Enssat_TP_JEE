@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>BONJOUR LA BRRETAGNE</title>
+    <title>BONJOUR LA BRETAGNE</title>
 </head>
 <body>
     <h1>Bonjour la Bretagne</h1>
