@@ -5,19 +5,19 @@
          version="4.0">
     <servlet>
 
-        <display-name>HelloWorld</display-name>
+        <display-name>MainServlet</display-name>
 
-        <servlet-name>HelloWorld</servlet-name>
+        <servlet-name>MainServlet</servlet-name>
 
-        <servlet-class>org.tutorial.HelloWorldServlet</servlet-class>
+        <servlet-class>org.tutorial.MainServlet</servlet-class>
 
     </servlet>
 
     <servlet-mapping>
 
-        <servlet-name>HelloWorld</servlet-name>
+        <servlet-name>MainServlet</servlet-name>
 
-        <url-pattern>/HelloWorld</url-pattern>
+        <url-pattern>/MainServlet</url-pattern>
 
     </servlet-mapping>
 </web-app>
