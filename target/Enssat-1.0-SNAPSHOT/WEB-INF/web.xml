@@ -5,9 +5,9 @@
          version="4.0">
     <servlet>
 
-        <display-name>HelloWorld</display-name>
+        <display-name>HelloWorldServlet</display-name>
 
-        <servlet-name>HelloWorld</servlet-name>
+        <servlet-name>HelloWorldServlet</servlet-name>
 
         <servlet-class>org.tutorial.HelloWorldServlet</servlet-class>
 
@@ -15,9 +15,9 @@
 
     <servlet-mapping>
 
-        <servlet-name>HelloWorld</servlet-name>
+        <servlet-name>HelloWorldServlet</servlet-name>
 
-        <url-pattern>/HelloWorld</url-pattern>
+        <url-pattern>/HelloWorldServlet</url-pattern>
 
     </servlet-mapping>
 </web-app>
