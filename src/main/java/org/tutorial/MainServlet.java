@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 public class MainServlet extends javax.servlet.http.HttpServlet{
 
@@ -23,6 +24,12 @@ public class MainServlet extends javax.servlet.http.HttpServlet{
 
 
     private void doProcess(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        
+        BookService bookService = null;
+        
+        List<Book> listBooks = bookService.getAllBooks();
+
+        request.setAttribute("listBooks", listBooks);
 
         String pageName="/accueil.jsp";
 

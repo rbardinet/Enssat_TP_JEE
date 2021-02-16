@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface BookDAO {
 
-    public List<Book> findByAll();
+    public static List<Book> findByAll() {
+        return null;
+    }
 
 }
