@@ -22,7 +22,7 @@ public class MainServlet extends javax.servlet.http.HttpServlet{
     }
 
 
-    private void doProcess(HttpServletRequest request, HttpServletResponse response) {
+    private void doProcess(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         String pageName="/accueil.jsp";
 
