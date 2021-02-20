@@ -20,4 +20,23 @@
         <url-pattern>/HelloWorldServlet</url-pattern>
 
     </servlet-mapping>
+
+    <servlet>
+
+        <display-name>MainServlet</display-name>
+
+        <servlet-name>MainServlet</servlet-name>
+
+        <servlet-class>org.tutorial.MainServlet</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>MainServlet</servlet-name>
+
+        <url-pattern>/MainServlet</url-pattern>
+
+    </servlet-mapping>
+
 </web-app>
