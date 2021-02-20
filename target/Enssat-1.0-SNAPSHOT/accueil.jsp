@@ -21,7 +21,7 @@
     <h1>accueil</h1>
     liste des livres :
 
-    <table border="1">
+    <table border="3">
 
         <tr>
 
