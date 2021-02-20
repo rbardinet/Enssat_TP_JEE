@@ -1,6 +1,7 @@
 package org.tutorial;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,9 +11,9 @@ public class BookDAOImpl implements BookDAO{
 
         java.sql.Connection connexion = DBManager.getInstance().getConnection();
         java.sql.Statement statement = connexion.createStatement();
-        java.sql.ResultSet rs = statement.executeQuery("select * from books where author='author1'");
+        java.sql.ResultSet rs = statement.executeQuery("select * from books where author='Bruce Eckel'");
 
-        List<Book> Res = Arrays.asList(new Book[]{});
+        ArrayList<Book> Res = new ArrayList<Book>();
         int ID;
         String Author;
         String Title;
@@ -22,6 +23,7 @@ public class BookDAOImpl implements BookDAO{
             Title = rs.getString("title");
             Author = rs.getString("author");
             ID = rs.getInt("id");
+            System.out.println("title = "+Title+", author = "+Author+", ID = "+ID);
             Res.add(new Book(ID,Title,Author));
         }
 
