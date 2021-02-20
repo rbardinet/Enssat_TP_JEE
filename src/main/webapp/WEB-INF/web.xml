@@ -16,6 +16,16 @@
 
     <servlet>
 
+        <display-name>HelloServlet</display-name>
+
+        <servlet-name>HelloServlet</servlet-name>
+
+        <servlet-class>org.tutorial.HelloServlet</servlet-class>
+
+    </servlet>
+
+    <servlet>
+
         <display-name>MainServlet</display-name>
 
         <servlet-name>MainServlet</servlet-name>
@@ -37,6 +47,14 @@
         <servlet-name>MainServlet</servlet-name>
 
         <url-pattern>/MainServlet</url-pattern>
+
+    </servlet-mapping>
+
+    <servlet-mapping>
+
+        <servlet-name>HelloServlet</servlet-name>
+
+        <url-pattern>/RARA</url-pattern>
 
     </servlet-mapping>
 

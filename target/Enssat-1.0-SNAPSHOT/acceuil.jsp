@@ -5,7 +5,7 @@
 <%
 
     List<Book> listBooks = (List<Book>)request.getAttribute("listBooks");
-    
+
 
     String myParameter=request.getParameter("param");
 

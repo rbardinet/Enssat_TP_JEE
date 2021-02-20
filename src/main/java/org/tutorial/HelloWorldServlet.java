@@ -15,7 +15,7 @@ public class HelloWorldServlet extends javax.servlet.http.HttpServlet{
 
         out.println("<html>");
 
-        out.println("<head><title>Hello World</title></head>");
+        out.println("<head><title>HelloRZRZ World</title></head>");
 
         out.println("<body>");
 

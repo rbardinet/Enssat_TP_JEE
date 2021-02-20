@@ -1,4 +1,4 @@
-package com.example.Enssat;
+package org.tutorial;
 
 import java.io.*;
 import javax.servlet.http.*;
@@ -9,7 +9,7 @@ public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello World!";
+        message = "RARA!";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
