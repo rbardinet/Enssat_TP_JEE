@@ -1,0 +1,23 @@
+- prerequisite : have a JDK installed (not only a JRE)
+https://adoptopenjdk.net/
+example : JDK11 LTS
+
+- install eclipse JEE :
+https://www.eclipse.org/downloads/packages/release/2020-12/r/eclipse-ide-enterprise-java-developers
+
+- install tomcat 9 and setup in eclipse
+https://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/
+
+
+- tests in eclipse : 
+create new project : File > new project > "Dynamic Web Project"
+name it "HelloWorld", click finish
+import files of the provided sample HelloWorld project 
+In the view 'Servers' right click on your tomcat server, and "add/remove project"
+add the "HelloWorld" project to right list, then finish
+start your tomcat server
+open http://localhost:8080/HelloWorld -> hello world jsp
+open http://localhost:8080/HelloWorld/HelloWorld -> hello world servlet
+
+
+

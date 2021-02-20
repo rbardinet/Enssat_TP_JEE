@@ -1,0 +1,26 @@
+import de la VM JEE_dev
+
+- Installer Oracle virtual box 6 : 
+https://www.virtualbox.org/wiki/Downloads
+
+- télécharger l'image de la machine virtuelle (3Gb)
+http://dl.free.fr/gOp5nFzIS
+
+- Dans virtual box : fichier / importer un appareil virtuel
+sélectionner le fichier .ova téléchargé
+
+- Paramètres de l'appareil virtuel :
+ 
+ * 2 proc / 3 Gb de RAM par défaut. 
+Vous pouvez booster la config si votre ordi le permet 
+(n'affectez pas plus de 50% des ressources de votre ordi à la machine virtuelle)
+ 
+ * Option politique d'adresse MAC : Générer de nouvelles adresses MAC pour toutes les interfaces réseau
+ 
+ Puis cliquer sur importer.
+
+- une fois l'import terminé, démarrer la VM
+
+- compte à utiliser : tonystark/tonystark
+
+- Astuce : vous pouvez régler la résolution de l'écran de la VM dans ubuntu en allant dans le "menu démarrer" / préférences / paramètres de l'écran, puis redémarrer
