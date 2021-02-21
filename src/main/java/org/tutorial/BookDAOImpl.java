@@ -17,16 +17,20 @@ public class BookDAOImpl implements BookDAO{
         int ID;
         String Author;
         String Title;
+        int nbRes = 0;
 
         while (rs.next()){
             //System.out.println(rs.getString(1));
             Title = rs.getString("title");
             Author = rs.getString("author");
             ID = rs.getInt("id");
-            //System.out.println("title = "+Title+", author = "+Author+", ID = "+ID);
+            System.out.println("title = "+Title+", author = "+Author+", ID = "+ID);
             Book book = new Book(ID,Title,Author);
             Res.add(book);
+            nbRes+=1;
         }
+
+        Res.add(new Book(-1,String.valueOf(nbRes),"7é8fskjhjkhkhjbf_é&zdjqk"));
 
         return Res;
     }
@@ -42,6 +46,7 @@ public class BookDAOImpl implements BookDAO{
         int ID;
         String Author;
         String Title;
+        int nbRes = 0;
 
         while (rs.next()){
             //System.out.println(rs.getString(1));
@@ -51,7 +56,10 @@ public class BookDAOImpl implements BookDAO{
             System.out.println("title = "+Title+", author = "+Author+", ID = "+ID);
             Book book = new Book(ID,Title,Author);
             Res.add(book);
+            nbRes+=1;
         }
+
+        Res.add(new Book(-1,String.valueOf(nbRes),"7é8fskjhjkhkhjbf_é&zdjqk"));
 
         return Res;
     }
@@ -67,6 +75,7 @@ public class BookDAOImpl implements BookDAO{
         int ID;
         String Author;
         String Title;
+        int nbRes = 0;
 
         while (rs.next()){
             //System.out.println(rs.getString(1));
@@ -76,8 +85,12 @@ public class BookDAOImpl implements BookDAO{
             System.out.println("title = "+Title+", author = "+Author+", ID = "+ID);
             Book book = new Book(ID,Title,Author);
             Res.add(book);
+            nbRes+=1;
         }
 
+        Res.add(new Book(-1,String.valueOf(nbRes),"7é8fskjhjkhkhjbf_é&zdjqk"));
+
         return Res;
+
     }
 }

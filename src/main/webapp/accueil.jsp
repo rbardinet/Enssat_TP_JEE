@@ -10,6 +10,7 @@
 <%
 
     List<Book> listBooks = (List<Book>)request.getAttribute("listBooks");
+    String nbRes = listBooks.get(listBooks.size()-1).getTitle();
 
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -34,7 +35,7 @@
         </div>
     </form>
 
-    liste des livres :
+    liste des livres (<%=nbRes %> résultat.s):
 
     <table border="3">
 
@@ -48,11 +49,11 @@
 
         <%
 
-            for (Book book:listBooks) {
+            for (int i = 0; i < listBooks.size()-1; i++) {
 
-                String title = book.getTitle();
+                String title = listBooks.get(i).getTitle();
 
-                String author = book.getAuthor();
+                String author = listBooks.get(i).getAuthor();
 
         %>
 
