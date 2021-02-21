@@ -22,8 +22,12 @@
 
     <form action="MainServlet" method="post">
         <div>
-            <label for="mot">Entrez un titre :</label>
-            <input type="text" id="mot" name="searchText">
+            <label for="titre">Entrez un titre :</label>
+            <input type="text" id="titre" name="searchTitre">
+        </div>
+        <div>
+            <label for="auteur">Entrez un auteur :</label>
+            <input type="text" id="auteur" name="searchAut">
         </div>
         <div class="button">
             <button type="submit">Rechercher</button>

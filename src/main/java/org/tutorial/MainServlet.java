@@ -42,7 +42,7 @@ public class MainServlet extends javax.servlet.http.HttpServlet{
         RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
 
         try {
-            String searchText = (String) request.getParameter("searchText");
+            String searchTitre = (String) request.getParameter("searchTitre");
             System.out.println("your key word = "+searchText);
 
             if(searchText != null){
