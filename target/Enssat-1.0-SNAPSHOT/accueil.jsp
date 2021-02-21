@@ -40,7 +40,7 @@
             if (Integer.parseInt(nbRes) > 1){
     %>
 
-    liste des livres (<%=nbRes %> résultat.s):
+    liste des livres (<%=nbRes %> résultats):
 
     <%
 
