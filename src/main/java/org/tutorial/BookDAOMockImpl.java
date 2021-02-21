@@ -16,4 +16,9 @@ public class BookDAOMockImpl implements BookDAO{
         return Res;
 
     }
+
+    @Override
+    public List<Book> findByTitle(String searchText) {
+        return null;
+    }
 }

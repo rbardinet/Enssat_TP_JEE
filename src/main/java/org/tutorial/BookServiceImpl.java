@@ -12,4 +12,10 @@ public class BookServiceImpl implements BookService{
         return bookDao.findByAll();
     }
 
+    @Override
+    public List<Book> getBooksByTitle(String searchText) throws SQLException {
+        return bookDao.findByTitle(searchText);
+    }
+
+
 }

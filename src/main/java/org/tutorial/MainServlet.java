@@ -35,23 +35,25 @@ public class MainServlet extends javax.servlet.http.HttpServlet{
 
         BookService bookService = new BookServiceImpl();
 
-        List<Book> listBooks = bookService.getAllBooks();
-
-        request.setAttribute("listBooks",listBooks);
+        List<Book> listBooks;
 
         String pageName="/accueil.jsp";
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
 
         try {
-
+            String searchText = (String) request.getParameter("searchText");
+            System.out.println("your key word = "+searchText);
+            searchText = "";
+            if (searchText.isEmpty()) {
+                listBooks = bookService.getAllBooks();
+            }else{
+                listBooks = bookService.getBooksByTitle("searchText");
+            }
+            request.setAttribute("listBooks",listBooks);
             rd.forward(request, response);
 
-        } catch (ServletException e) {
-
-            e.printStackTrace();
-
-        } catch (IOException e) {
+        } catch (ServletException | IOException e) {
 
             e.printStackTrace();
 

@@ -19,6 +19,17 @@
 </head>
 <body>
     <h1>accueil</h1>
+
+    <form action="MainServlet" method="post">
+        <div>
+            <label for="mot">Mot Clé :</label>
+            <input type="text" id="mot" name="searchText">
+        </div>
+        <div class="button">
+            <button type="submit">Rechercher</button>
+        </div>
+    </form>
+
     liste des livres :
 
     <table border="3">
