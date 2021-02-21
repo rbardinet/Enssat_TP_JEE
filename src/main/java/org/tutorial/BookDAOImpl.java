@@ -13,7 +13,7 @@ public class BookDAOImpl implements BookDAO{
         java.sql.Statement statement = connexion.createStatement();
         java.sql.ResultSet rs = statement.executeQuery("select * from books where author='Bruce Eckel'");
 
-        ArrayList<Book> Res = new ArrayList<Book>();
+        List<Book> Res = new ArrayList<Book>();
         int ID;
         String Author;
         String Title;
@@ -24,7 +24,8 @@ public class BookDAOImpl implements BookDAO{
             Author = rs.getString("author");
             ID = rs.getInt("id");
             System.out.println("title = "+Title+", author = "+Author+", ID = "+ID);
-            Res.add(new Book(ID,Title,Author));
+            Book book = new Book(ID,Title,Author);
+            Res.add(book);
         }
 
         return Res;

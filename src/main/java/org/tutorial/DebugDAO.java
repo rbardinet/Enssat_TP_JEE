@@ -9,7 +9,7 @@ public class DebugDAO {
         List<Book> ListTest = debug.findByAll();
 
         for(int i=0; i < ListTest.size(); i++){
-            System.out.println( ListTest.get(i) );
+            System.out.println( ListTest.get(i).getAuthor() );
         }
 
     }
