@@ -35,7 +35,26 @@
         </div>
     </form>
 
+    <%
+        if (Integer.parseInt(nbRes) > 0) {
+            if (Integer.parseInt(nbRes) > 1){
+    %>
+
     liste des livres (<%=nbRes %> résultat.s):
+
+    <%
+
+            }else{
+
+    %>
+
+    <%=nbRes %> livre trouvé :
+
+    <%
+
+            }
+
+    %>
 
     <table border="3">
 
@@ -72,5 +91,20 @@
         %>
 
     </table>
+
+    <%
+
+        }else{
+
+    %>
+
+    aucun livre ne correspond au champ entré :(
+
+    <%
+
+        }
+
+    %>
+
 </body>
 </html>
