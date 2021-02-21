@@ -43,13 +43,17 @@ public class MainServlet extends javax.servlet.http.HttpServlet{
 
         try {
             String searchTitre = (String) request.getParameter("searchTitre");
-            System.out.println("your key word = "+searchText);
+            String searchAut = (String) request.getParameter("searchAut");
+            System.out.println("your key word Titre = "+searchTitre);
+            System.out.println("your key word Aut = "+searchAut);
 
-            if(searchText != null){
-                if (searchText.isEmpty()) {
+            if(searchTitre != null && searchAut != null){
+                if (searchTitre.isEmpty() && searchAut.isEmpty()) {
                     listBooks = bookService.getAllBooks();
-                }else{
-                    listBooks = bookService.getBooksByTitle(searchText);
+                }else if(searchAut.isEmpty()){
+                    listBooks = bookService.getBooksByTitle(searchTitre);
+                }else {
+                    listBooks = bookService.getBooksByAut(searchAut);
                 }
             }
 

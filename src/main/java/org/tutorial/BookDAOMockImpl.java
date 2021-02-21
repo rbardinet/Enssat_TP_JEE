@@ -1,5 +1,6 @@
 package org.tutorial;
 
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,6 +20,11 @@ public class BookDAOMockImpl implements BookDAO{
 
     @Override
     public List<Book> findByTitle(String searchText) {
+        return null;
+    }
+
+    @Override
+    public List<Book> findByAut(String searchText) throws SQLException {
         return null;
     }
 }

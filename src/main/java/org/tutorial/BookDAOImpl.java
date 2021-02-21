@@ -55,4 +55,29 @@ public class BookDAOImpl implements BookDAO{
 
         return Res;
     }
+
+    @Override
+    public List<Book> findByAut(String searchText) throws SQLException {
+        java.sql.Connection connexion = DBManager.getInstance().getConnection();
+        java.sql.Statement statement = connexion.createStatement();
+        System.out.println("select * from books where title = '"+searchText+"'");
+        java.sql.ResultSet rs = statement.executeQuery("select * from books where author = '"+searchText+"'");
+
+        List<Book> Res = new ArrayList<Book>();
+        int ID;
+        String Author;
+        String Title;
+
+        while (rs.next()){
+            //System.out.println(rs.getString(1));
+            Title = rs.getString("title");
+            Author = rs.getString("author");
+            ID = rs.getInt("id");
+            System.out.println("title = "+Title+", author = "+Author+", ID = "+ID);
+            Book book = new Book(ID,Title,Author);
+            Res.add(book);
+        }
+
+        return Res;
+    }
 }

@@ -6,4 +6,5 @@ import java.util.List;
 public interface BookService {
     public List<Book> getAllBooks() throws SQLException;
     public List<Book> getBooksByTitle(String searchText) throws SQLException;
+    public List<Book> getBooksByAut(String searchText) throws SQLException;
 }

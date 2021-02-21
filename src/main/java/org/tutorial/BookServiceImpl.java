@@ -17,5 +17,10 @@ public class BookServiceImpl implements BookService{
         return bookDao.findByTitle(searchText);
     }
 
+    @Override
+    public List<Book> getBooksByAut(String searchText) throws SQLException {
+        return bookDao.findByAut(searchText);
+    }
+
 
 }
