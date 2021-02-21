@@ -35,7 +35,7 @@ public class MainServlet extends javax.servlet.http.HttpServlet{
 
         BookService bookService = new BookServiceImpl();
 
-        List<Book> listBooks;
+        List<Book> listBooks = listBooks = bookService.getAllBooks();
 
         String pageName="/accueil.jsp";
 
@@ -44,12 +44,15 @@ public class MainServlet extends javax.servlet.http.HttpServlet{
         try {
             String searchText = (String) request.getParameter("searchText");
             System.out.println("your key word = "+searchText);
-            searchText = "";
-            if (searchText.isEmpty()) {
-                listBooks = bookService.getAllBooks();
-            }else{
-                listBooks = bookService.getBooksByTitle("searchText");
+
+            if(searchText != null){
+                if (searchText.isEmpty()) {
+                    listBooks = bookService.getAllBooks();
+                }else{
+                    listBooks = bookService.getBooksByTitle(searchText);
+                }
             }
+
             request.setAttribute("listBooks",listBooks);
             rd.forward(request, response);
 
