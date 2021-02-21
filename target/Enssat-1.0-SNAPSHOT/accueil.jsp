@@ -22,7 +22,7 @@
 
     <form action="MainServlet" method="post">
         <div>
-            <label for="mot">Mot Clé :</label>
+            <label for="mot">Entrez un titre :</label>
             <input type="text" id="mot" name="searchText">
         </div>
         <div class="button">
